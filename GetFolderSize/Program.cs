@@ -15,12 +15,14 @@ namespace GetFolderSize
             string pathToFile1 = /*"drive1.txt"*/Console.ReadLine();
             List<string> drive1 = File.ReadAllLines(pathToFile1).ToList();
             ConsoleColor defaultForegroundColor = Console.ForegroundColor;
+            Console.WriteLine();
+            Console.WriteLine("=====================");
 
             foreach (var line in drive1)
             {
                 string folderPath1 = line.Substring(0, line.IndexOf(';'));
                 string folderPath2 = line.Substring(line.IndexOf(';'));
-                folderPath2 = folderPath2/*Replace*//*(";", "").Replace(" ", "")*/.Trim(';',' ','\t');
+                folderPath2 = folderPath2.Trim(';',' ','\t');
 
                 long directorySize1 = GetDirectorySize(folderPath1);
                 long directoryXize2 = GetDirectorySize(folderPath2);
