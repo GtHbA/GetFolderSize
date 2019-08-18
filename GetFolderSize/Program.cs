@@ -21,8 +21,8 @@ namespace GetFolderSize
             foreach (var line in drive1)
             {
                 string folderPath1 = line.Substring(0, line.IndexOf(';'));
-                string folderPath2 = line.Substring(line.IndexOf(';'));
-                folderPath2 = folderPath2.Trim(';',' ','\t');
+                string folderPath2 = line.Substring(line.IndexOf(';')).Trim(';', ' ', '\t');
+                //folderPath2 = folderPath2.Trim(';',' ','\t');
 
                 long directorySize1 = GetDirectorySize(folderPath1);
                 long directoryXize2 = GetDirectorySize(folderPath2);
