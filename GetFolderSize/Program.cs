@@ -12,8 +12,8 @@ namespace GetFolderSize
         static void Main(string[] args)
         {
             Console.WriteLine("Enter path to file:");
-            string pathToFile1 = /*"drive1.txt"*/Console.ReadLine();
-            List<string> drive1 = File.ReadAllLines(pathToFile1).ToList();
+            string pathToFile = /*"drive1.txt"*/Console.ReadLine();
+            List<string> drive1 = File.ReadAllLines(pathToFile).ToList();
             ConsoleColor defaultForegroundColor = Console.ForegroundColor;
             Console.WriteLine();
             Console.WriteLine("=====================");
